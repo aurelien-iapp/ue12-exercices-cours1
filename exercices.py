@@ -317,3 +317,4 @@ def add_row_values(arr):
 print(add_row_values(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))) # attendu: [[ 2  3  4]
 #                                                                        [ 6  7  8]
 #                                                                        [10 11 12]]
+
