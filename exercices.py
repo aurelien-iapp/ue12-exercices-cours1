@@ -16,7 +16,7 @@ def create_zeros():
     pass  # 👈 Insérez le code ici
 
 
-print(create_zeros())  # attendu: [0. 0. 0. 0. 0.]
+# print(create_zeros())  # attendu: [0. 0. 0. 0. 0.]
 
 # %% [markdown]
 # ## Exercices 1.2.	Créer un tableau de 5 uns
@@ -29,7 +29,7 @@ def create_ones():
     pass  # 👈 Insérez le code ici
 
 
-print(create_ones())  # attendu: [1. 1. 1. 1. 1.]
+# print(create_ones())  # attendu: [1. 1. 1. 1. 1.]
 
 # %% [markdown]
 # ## Exercices 1.3.	Créer un tableau contenant les entiers de 10 à 50
@@ -42,7 +42,7 @@ def create_range():
     pass  # 👈 Insérez le code ici
 
 
-print(create_range())  # attendu: [10 11 12 13 14 15 16 17 ...] (jusqu'à 50 inclus)
+# print(create_range())  # attendu: [10 11 12 13 14 15 16 17 ...] (jusqu'à 50 inclus)
 
 # %% [markdown]
 # ## Exercices 1.4.	Créer une matrice identité 3x3
@@ -55,7 +55,7 @@ def create_identity():
     pass  # 👈 Insérez le code ici
 
 
-print(create_identity())  # attendu: [[1. 0. 0.]
+# print(create_identity())  # attendu: [[1. 0. 0.]
 #                                     [0. 1. 0.]
 #                                     [0. 0. 1.]]
 
@@ -70,7 +70,7 @@ def create_random():
     pass  # 👈 Insérez le code ici
 
 
-print(create_random())  # attendu: un tableau 3x3 de valeurs aléatoires entre 0 et 1
+# print(create_random())  # attendu: un tableau 3x3 de valeurs aléatoires entre 0 et 1
 
 # %% [markdown]
 # # Niveau 2 : Vectorisation
@@ -86,7 +86,7 @@ def add_five(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(add_five(np.array([1, 2, 3, 4, 5])))  # attendu: [6 7 8 9 10]
+# print(add_five(np.array([1, 2, 3, 4, 5])))  # attendu: [6 7 8 9 10]
 
 # %% [markdown]
 # ## Exercices 2.2.	Créer une fonction qui met chaque élément d'un tableau au carré
@@ -99,7 +99,7 @@ def square(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(square(np.array([1, 2, 3, 4, 5])))  # attendu: [ 1  4  9 16 25]
+# print(square(np.array([1, 2, 3, 4, 5])))  # attendu: [ 1  4  9 16 25]
 
 # %% [markdown]
 # ## Exercices 2.3.	Créer un tableau contenant les valeurs de $\sin$ pour les nombres de 0 à 2π (inclus) avec un pas de 0.1
@@ -112,9 +112,9 @@ def sin_values():
     pass  # 👈 Insérez le code
 
 
-print(
-    sin_values()
-)  # attendu: un tableau de valeurs de sin(0), sin(0.1), sin(0.2), ... sin(2π)
+# print(
+#     sin_values()
+#)  # attendu: un tableau de valeurs de sin(0), sin(0.1), sin(0.2), ... sin(2π)
 
 
 # %% [markdown]
@@ -135,9 +135,9 @@ def f_vectorized(arr1, arr2):
     pass  # 👈 Insérez le code ici
 
 
-print(
-    f_vectorized(np.array([5, 4, 3, 2, 1]), np.array([1, 2, 3, 4, 5]))
-)  # attendu: [13 14 15 16 17]
+# print(
+#     f_vectorized(np.array([5, 4, 3, 2, 1]), np.array([1, 2, 3, 4, 5]))
+# )  # attendu: [13 14 15 16 17]
 
 # %% [markdown]
 # ## Exercices 2.5.	Ré-écriture sous forme vectorisée (2/2)
@@ -160,7 +160,7 @@ def g_vectorized(x):
     pass  # 👈 Insérez le code ici
 
 
-print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
+# print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
 
 # %% [markdown]
 # # Niveau 3 : Indexation et slicing
@@ -176,9 +176,9 @@ def select_even(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(
-    select_even(np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
-)  # attendu: [ 2  4  6  8 10]
+# print(
+#     select_even(np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+# )  # attendu: [ 2  4  6  8 10]
 
 # %% [markdown]
 # ## Exercices 3.2.	Remplacer les valeurs négatives d’un tableau par 0
@@ -191,7 +191,7 @@ def replace_negatives(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(replace_negatives(np.array([1, -2, 3, -4, 5])))  # attendu: [1 0 3 0 5]
+# print(replace_negatives(np.array([1, -2, 3, -4, 5])))  # attendu: [1 0 3 0 5]
 
 # %% [markdown]
 # ## Exercices 3.3.	Créer une fonction qui, étant donné un tableau 2D de dimensions >1, retourne la sous-matrice obtenue en enlevant la première et la dernière ligne et colonne
@@ -205,7 +205,7 @@ def get_center(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(get_center(np.arange(1, 26).reshape(5, 5)))  # attendu: [[ 7  8  9]
+# print(get_center(np.arange(1, 26).reshape(5, 5)))  # attendu: [[ 7  8  9]
 #               [12 13 14]
 #               [17 18 19]]
 
@@ -220,7 +220,7 @@ def swap_first_rows(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(swap_first_rows(np.array([[1, 2], [3, 4], [5, 6]])))  # attendu: [[3 4]
+# print(swap_first_rows(np.array([[1, 2], [3, 4], [5, 6]])))  # attendu: [[3 4]
 #                                                                       [1 2]
 #                                                                       [5 6]]
 
@@ -238,7 +238,7 @@ def funny_checkerboard(size):
     pass  # 👈 Insérez le code ici
 
 
-print(funny_checkerboard(5))  # attendu: [[1. 0. 1. 0. 1.]
+# print(funny_checkerboard(5))  # attendu: [[1. 0. 1. 0. 1.]
 #                                         [0. 1. 0. 1. 0.]
 #                                         [3. 0. 3. 0. 3.]
 #                                         [0. 1. 0. 1. 0.]
@@ -270,7 +270,7 @@ def sum_odd_columns(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(sum_odd_columns(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: 15
+# print(sum_odd_columns(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: 15
 
 # %% [markdown]
 # ## Exercices 4.3.	Créer une fonction qui, étant donné un tableau 2D, retourne l'élément maximal de chaque ligne
@@ -284,7 +284,7 @@ def max_per_line(arr):
     pass  # 👈 Insérez le code ici
 
 
-print(max_per_line(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [3 6 9]
+# print(max_per_line(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [3 6 9]
 
 
 # %% [markdown]
@@ -298,7 +298,7 @@ def normalize(arr):
     pass  # 👈 Insérez le code ic
 
 
-print(normalize(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [[0.1 0.2 0.3]
+# print(normalize(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [[0.1 0.2 0.3]
 #                                                                        [0.4 0.5 0.6]
 #                                                                        [0.7 0.8 0.9]]
 
@@ -314,6 +314,6 @@ print(normalize(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [[0.1 
 def add_row_values(arr):
     pass  # 👈 Insérez le code ici
 
-print(add_row_values(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))) # attendu: [[ 2  3  4]
+# print(add_row_values(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))) # attendu: [[ 2  3  4]
 #                                                                        [ 6  7  8]
 #                                                                        [10 11 12]]
