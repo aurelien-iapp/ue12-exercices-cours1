@@ -1,10 +1,10 @@
-name: ue12
+name: ue12-exercices
 channels:
   - conda-forge
   - defaults
 dependencies:
   # un Python récent
-  - python>=3.10
+  - python>=3.12
   # les deps présentes sur conda-forge
   - numpy>=2.1
   - pandas>=2.2
@@ -24,3 +24,4 @@ dependencies:
   - pip:
       - jupyterlab-courselevels
       - ipythontutor
+      - pytest

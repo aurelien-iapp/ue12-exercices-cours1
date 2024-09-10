@@ -13,7 +13,6 @@ import numpy as np
 
 # %%
 def create_zeros():
-    return np.zeros(5)
     pass  # 👈 Insérez le code ici
 
 
@@ -27,7 +26,6 @@ print(create_zeros())  # attendu: [0. 0. 0. 0. 0.]
 
 # %%
 def create_ones():
-    return np.ones(5)
     pass  # 👈 Insérez le code ici
 
 
@@ -41,7 +39,6 @@ print(create_ones())  # attendu: [1. 1. 1. 1. 1.]
 
 # %%
 def create_range():
-    return np.arange(10, 51)
     pass  # 👈 Insérez le code ici
 
 
@@ -55,7 +52,6 @@ print(create_range())  # attendu: [10 11 12 13 14 15 16 17 ...] (jusqu'à 50 inc
 
 # %%
 def create_identity():
-    return np.eye(3)
     pass  # 👈 Insérez le code ici
 
 
@@ -71,7 +67,6 @@ print(create_identity())  # attendu: [[1. 0. 0.]
 
 # %%
 def create_random():
-    return np.random.rand(3, 3)
     pass  # 👈 Insérez le code ici
 
 
@@ -88,7 +83,6 @@ print(create_random())  # attendu: un tableau 3x3 de valeurs aléatoires entre 0
 
 # %%
 def add_five(arr):
-    return arr + 5
     pass  # 👈 Insérez le code ici
 
 
@@ -102,7 +96,6 @@ print(add_five(np.array([1, 2, 3, 4, 5])))  # attendu: [6 7 8 9 10]
 
 # %%
 def square(arr):
-    return arr**2
     pass  # 👈 Insérez le code ici
 
 
@@ -116,7 +109,6 @@ print(square(np.array([1, 2, 3, 4, 5])))  # attendu: [ 1  4  9 16 25]
 
 # %%
 def sin_values():
-    return np.sin(np.arange(0, 2 * np.pi + 0.1, 0.1))
     pass  # 👈 Insérez le code
 
 
@@ -140,7 +132,6 @@ def f(arr1, arr2):
 
 
 def f_vectorized(arr1, arr2):
-    return 2 * arr1 + 3 * arr2
     pass  # 👈 Insérez le code ici
 
 
@@ -166,7 +157,6 @@ def g(x):
 
 
 def g_vectorized(x):
-    return np.where(x > 0, x**2, x)
     pass  # 👈 Insérez le code ici
 
 
@@ -183,7 +173,6 @@ print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
 
 # %%
 def select_even(arr):
-    return arr[arr % 2 == 0]
     pass  # 👈 Insérez le code ici
 
 
@@ -199,7 +188,6 @@ print(
 
 # %%
 def replace_negatives(arr):
-    return np.where(arr < 0, 0, arr)
     pass  # 👈 Insérez le code ici
 
 
@@ -214,7 +202,6 @@ print(replace_negatives(np.array([1, -2, 3, -4, 5])))  # attendu: [1 0 3 0 5]
 
 # %%
 def get_center(arr):
-    return arr[1:-1, 1:-1]
     pass  # 👈 Insérez le code ici
 
 
@@ -230,8 +217,6 @@ print(get_center(np.arange(1, 26).reshape(5, 5)))  # attendu: [[ 7  8  9]
 
 # %%
 def swap_first_rows(arr):
-    arr[[0, 1]] = arr[[1, 0]]
-    return arr
     pass  # 👈 Insérez le code ici
 
 
@@ -250,12 +235,6 @@ print(swap_first_rows(np.array([[1, 2], [3, 4], [5, 6]])))  # attendu: [[3 4]
 
 # %%
 def funny_checkerboard(size):
-    arr = np.zeros((size, size))
-    # arr[::2, ::2] = np.arange(1, size+1, 2)[:, np.newaxis]
-    [lines, _columns] = np.indices(arr.shape)
-    arr[::2, ::2] = lines[::2, ::2] + 1
-    arr[1::2, 1::2] = 1
-    return arr
     pass  # 👈 Insérez le code ici
 
 
@@ -277,7 +256,6 @@ print(funny_checkerboard(5))  # attendu: [[1. 0. 1. 0. 1.]
 
 # %%
 def mean(arr):
-    return arr.mean()
     pass  # 👈 Insérez le code ici
 
 
@@ -289,7 +267,6 @@ def mean(arr):
 
 # %%
 def sum_odd_columns(arr):
-    return arr[:, 1::2].sum()
     pass  # 👈 Insérez le code ici
 
 
@@ -304,36 +281,39 @@ print(sum_odd_columns(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: 
 
 # %%
 def max_per_line(arr):
-    return arr.max(axis=1)
     pass  # 👈 Insérez le code ici
 
 
 print(max_per_line(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [3 6 9]
 
+
 # %% [markdown]
-# ## Exercices 4.4.
+# ## Exercices 4.4.	Normaliser une matrice passée en argument pour que la somme de chaque colonne vale 1
 #
-# Compléter la fonction `std` pour qu'elle retourne l'écart-type des éléments du tableau d'entrée.
+# Compléter la fonction `normalize` pour qu'elle retourne une matrice normalisée de telle sorte que la somme de chaque colonne vaille 1.
 
-
-# Niveau 4 : Fonctions d’agrégation
-
-# 	14.	Créer un tableau 1D de 10 éléments aléatoires et calculer la somme
-# Test: Vérifier que la somme est correcte.
-# 	15.	Calculer la moyenne des éléments d’une matrice 3x3 aléatoire
-# Test: Vérifier que la moyenne est correcte.
-# 	16.	Créer une matrice 4x4 aléatoire et retourner l’élément maximal pour chaque ligne
-# Test: Vérifier que l’élément maximal de chaque ligne est correct.
-# 	17.	Calculer l’écart-type des éléments d’un tableau de nombres aléatoires
-# Test: Vérifier que le calcul de l’écart-type est correct.
-
-# Niveau 5 : Broadcasting
-
-# 	18.	Ajouter un tableau 1D de taille 3 à chaque ligne d’une matrice 3x3
-# Test: Vérifier que l’addition a été faite correctement avec le broadcasting.
-# 	19.	Multiplier un tableau 1D par un tableau 2D de forme (3,3)
-# Test: Vérifier que chaque ligne du tableau 2D a bien été multipliée par les valeurs du tableau 1D.
-# 	20.	Créer une matrice 5x5 avec des valeurs aléatoires, puis normaliser chaque colonne (faire en sorte que la somme de chaque colonne soit égale à 1)
-# Test: Vérifier que chaque colonne est bien normalisée.
 
 # %%
+def normalize(arr):
+    pass  # 👈 Insérez le code ic
+
+
+print(normalize(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: [[0.1 0.2 0.3]
+#                                                                        [0.4 0.5 0.6]
+#                                                                        [0.7 0.8 0.9]]
+
+# %% [markdown]
+# # Niveau 5 : Broadcasting
+#
+# ## Exercices 5.1.	Ajouter une valeur a chaque ligne d'une matrice: 1 pour la première ligne, 2 pour la deuxième, etc.
+#
+# Compléter la fonction `add_row_values` pour qu'elle retourne un tableau 2D contenant les éléments du tableau d'entrée augmentés de 1 pour la première ligne, 2 pour la deuxième, etc. 
+
+
+# %%
+def add_row_values(arr):
+    pass  # 👈 Insérez le code ici
+
+print(add_row_values(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))) # attendu: [[ 2  3  4]
+#                                                                        [ 6  7  8]
+#                                                                        [10 11 12]]

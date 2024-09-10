@@ -256,3 +256,38 @@ class TestNiveau4:
         actual = exercices.max_per_line(np.array([[1]]))
         expected = [1]
         assert_equal(actual, expected)
+
+    def test_normalize(self):
+        # l'exemple doit marcher
+        test_arr = np.array([[1, 2], [3, 4]])
+        print(test_arr)
+        actual = exercices.normalize(test_arr)
+        expected = np.array(
+            [
+                [0.25,  0.333333333],
+                [0.75, 0.666666666],
+            ]
+        )
+        assert_allclose(actual, expected)
+
+        # cas aux limites
+        actual = exercices.normalize(np.array([[1]]))
+        expected = np.array([[1]])
+        assert_equal(actual, expected)
+
+class TestNiveau5:
+    def test_add_row_values(self):
+        # l'exemple doit marcher
+        test_arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+        actual = exercices.add_row_values(test_arr)
+        expected = np.array([[2, 3, 4], [6, 7, 8], [10, 11, 12]])
+        assert_equal(actual, expected)
+
+        # cas aux limites
+        actual = exercices.add_row_values(np.array([[1]]))
+        expected = np.array([[2]])
+        assert_equal(actual, expected)
+
+        actual = exercices.add_row_values(np.array([[]]))
+        expected = np.array([[]])
+        assert_equal(actual, expected)
