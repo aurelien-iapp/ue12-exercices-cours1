@@ -13,6 +13,7 @@ import numpy as np
 
 # %%
 def create_zeros():
+    return np.zeros(5)
     pass  # 👈 Insérez le code ici
 
 
